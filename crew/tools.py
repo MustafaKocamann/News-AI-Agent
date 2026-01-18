@@ -10,7 +10,10 @@ load_dotenv()
 import os
 
 # Set up the Serper API key from environment variables
-os.environ["SERPER_API_KEY"] = os.getenv("SERPER_API_KEY")
+# Only set if the key exists (handles both local .env and Streamlit Cloud secrets)
+serper_key = os.getenv("SERPER_API_KEY")
+if serper_key:
+    os.environ["SERPER_API_KEY"] = serper_key
 
 from crewai_tools import SerperDevTool
 
