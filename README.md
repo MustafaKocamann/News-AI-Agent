@@ -9,7 +9,9 @@
 
 **An intelligent multi-agent system for discovering and analyzing the latest AI developments in healthcare**
 
-[Features](#-features) • [Demo](#-demo) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-architecture) • [Contributing](#-contributing)
+🚀 **[Live Demo](https://ai-healthcare-news-agent.streamlit.app/)** 🚀
+
+[Features](#-features) • [Installation](#-installation) • [Usage](#-usage) • [Architecture](#-architecture) • [Contributing](#-contributing)
 
 </div>
 
