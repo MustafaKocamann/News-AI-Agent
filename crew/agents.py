@@ -14,10 +14,15 @@ load_dotenv()
 
 # Configure LLM using CrewAI's LLM system with Groq
 # Using llama-3.3-70b-versatile for fast, high-quality responses
+groq_key = os.getenv("GROQ_API_KEY")
+if not groq_key:
+    import streamlit as st
+    groq_key = st.secrets.get("GROQ_API_KEY")
+
 llm = LLM(
     model="groq/llama-3.3-70b-versatile",
     temperature=0.3,  # Lower temperature for more consistent and focused outputs
-    api_key=os.getenv("GROQ_API_KEY")
+    api_key=groq_key
 )
 
 # Define the Senior News Researcher Agent
